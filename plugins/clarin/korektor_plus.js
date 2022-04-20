@@ -5,6 +5,8 @@
 // @description  Małe usprawnienie działania korektora clarinowego
 // @author       Jakub Orzyłowski
 // @match        http://mowa.clarin-pl.eu:7000/speech/*
+// @updateURL    https://jakuborz.github.io/plugins/clarin/korektor_plus.js
+// @downloadURL  https://jakuborz.github.io/plugins/clarin/korektor_plus.js
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=clarin-pl.eu
 // @grant        none
 // ==/UserScript==
