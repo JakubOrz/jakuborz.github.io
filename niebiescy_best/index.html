@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Niebiescy best</title>
+    <link href="css/main_style.css" rel="stylesheet" type="text/css">
+    <script src="js/photoChanger.js"></script>
+    <script src="js/form_sumit_js.js"></script>
+</head>
+<body onload="loadSlides()">
+    <header>
+        <a href="#section1" class="logo">Ingress Resistance Polska</a>
+        <ul>
+            <li>
+                <a href="#section1">Slajd 1</a>
+            </li>
+            <li>
+                <a href="#section2">Slajd 2</a>
+            </li>
+            <li>
+                <a href="#section3">Slajd 3</a>
+            </li>
+        </ul>
+    </header>
+    <section id="section1" class="background_banner main_section">
+        <div class="photoBox">
+            <img src="static/flaga_irw_4.png" alt="photo1" class="active">
+            <img src="static/frostguard_flag_1.png" alt="photo2">
+            <img src="static/cassandra_warsaw.jpeg" alt="photo3">
+            <img src="static/Screenshot%20from%202022-07-10%2010-14-04.png" alt="photo4">
+            <img src="static/Screenshot%20from%202022-09-09%2001-45-42.png" alt="photo5">
+        </div>
+        <div class="contentBox">
+            <p>
+                <h2> To nie tylko gra</h2>
+                Dołącz do nas już dzisiaj, pomóż walczyć z zielonom zarazą
+            </p>
+        </div>
+        <ul class="controls" >
+            <li onclick="moveToSection('section2')"></li>
+        </ul>
+    </section>
+    <section id="section2" class="test_class main_section">
+        <p> Lol </p>
+        <div class="contentBox">
+            <p>
+                <h2> To nie tylko gra</h2>
+                Dołącz do nas już dzisiaj, pomóż walczyć z zielonom zarazą
+            </p>
+        </div>
+        <ul class="controls" >
+            <li onclick="moveToSection('section3')"></li>
+        </ul>
+    </section>
+    <section id="section3" class="contact_class main_section">
+        <p> Tutaj będzie elegenckie coś z kontaktem </p>
+        <form class="recruit_form">
+            <fieldset>
+                <h2 class="form_title">Dołącz do społeczności już dziś!</h2>
+                <label>
+                    Nick z gry
+                    <input type="text" name="nickname" placeholder="Agent Codename" required>
+                </label>
+                <label>
+                    Nick z Telegrama
+                    <input type="text" name="tgusername" placeholder="Telegram Nickname" required>
+                </label>
+                <input type="submit" id="submit_button" name="submit_button" class="submit_button" onsubmit="recruit_form_submitted()">
+            </fieldset>
+
+        </form>
+        <ul class="controls reverse" >
+            <li onclick="moveToSection('section1')"></li>
+        </ul>
+    </section>
+</body>
+</html>
