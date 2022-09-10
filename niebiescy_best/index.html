@@ -2,76 +2,109 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niebiescy best</title>
     <link href="css/main_style.css" rel="stylesheet" type="text/css">
     <script src="js/photoChanger.js"></script>
     <script src="js/form_sumit_js.js"></script>
 </head>
-<body onload="loadSlides()">
+<body onload="onDocumentLoaded()">
     <header>
-        <a href="#section1" class="logo">Ingress Resistance Polska</a>
+        <a href="#section1" id="logo_link" class="logo">Ingress Resistance Polska</a>
         <ul>
             <li>
-                <a href="#section1">Slajd 1</a>
+                <a href="#section1">Wstęp</a>
             </li>
             <li>
-                <a href="#section2">Slajd 2</a>
+                <a href="#section2">Społeczność</a>
             </li>
             <li>
-                <a href="#section3">Slajd 3</a>
+                <a href="#section3">Eventy</a>
+            </li>
+            <li>
+                <a href="#section4">Dołącz</a>
             </li>
         </ul>
     </header>
     <section id="section1" class="background_banner main_section">
         <div class="photoBox">
-            <img src="static/flaga_irw_4.png" alt="photo1" class="active">
-            <img src="static/frostguard_flag_1.png" alt="photo2">
-            <img src="static/cassandra_warsaw.jpeg" alt="photo3">
-            <img src="static/Screenshot%20from%202022-07-10%2010-14-04.png" alt="photo4">
-            <img src="static/Screenshot%20from%202022-09-09%2001-45-42.png" alt="photo5">
+            <img src="static/default.png" alt="Background" class="active">
+            <img src="static/default.png" alt="Background" >
+            <img src="static/desktop/3.png" alt="Background" >
+            <img src="static/desktop/4.png" alt="Background" >
+            <img src="static/desktop/5.png" alt="Background" >
+            <img src="static/desktop/6.png" alt="Background" >
+            <img src="static/desktop/7.png" alt="Background" >
         </div>
         <div class="contentBox">
             <p>
                 <h2> To nie tylko gra</h2>
-                Dołącz do nas już dzisiaj, pomóż walczyć z zielonom zarazą
+                "Świat wokół ciebie nie jest taki, jakim się wydaje"<br><br>
+                Ingress to oparta na lokalizacji gra sieciowa z rozszerzoną rzeczywistością,
+                stworzona przez Niantic Labs. Gra ma złożoną historię science fiction z ciągłą, otwartą narracją.
+                Naprzeciw siebie walczą dwie frakcje: <span class="green_text">Enlightened</span>,
+                oraz <span class="blue_text">Resistance</span>.<br>
+                A ty po której stronie staniesz?
             </p>
+            <div class="link_box">
+                <a id="google_play_link" style="display:inline-block;overflow:hidden;background:url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;background-size:152px; background-position: center;" href="https://play.google.com/store/apps/details?id=com.nianticproject.ingress&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank"></a>
+                <a id="appstore_link" target="_blank" href="https://itunes.apple.com/us/app/ingress/id576505181?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;"></a>
+            </div>
         </div>
         <ul class="controls" >
             <li onclick="moveToSection('section2')"></li>
         </ul>
     </section>
-    <section id="section2" class="test_class main_section">
-        <p> Lol </p>
+    <section id="section2" class="main_section">
         <div class="contentBox">
             <p>
-                <h2> To nie tylko gra</h2>
-                Dołącz do nas już dzisiaj, pomóż walczyć z zielonom zarazą
+            <h2> Niebieska społeczność</h2>
+            Dołącz do nas już dzisiaj, pomóż walczyć z zielonom zarazą
             </p>
         </div>
         <ul class="controls" >
             <li onclick="moveToSection('section3')"></li>
         </ul>
     </section>
-    <section id="section3" class="contact_class main_section">
-        <p> Tutaj będzie elegenckie coś z kontaktem </p>
-        <form class="recruit_form">
-            <fieldset>
-                <h2 class="form_title">Dołącz do społeczności już dziś!</h2>
-                <label>
-                    Nick z gry
-                    <input type="text" name="nickname" placeholder="Agent Codename" required>
-                </label>
-                <label>
-                    Nick z Telegrama
-                    <input type="text" name="tgusername" placeholder="Telegram Nickname" required>
-                </label>
-                <input type="submit" id="submit_button" name="submit_button" class="submit_button" onsubmit="recruit_form_submitted()">
-            </fieldset>
+    <section id="section3" class="test_class main_section">
+        <div class="contentBox">
+            <p>
+                <h2>Wydarzenia</h2>
+                Od spotanicznych pikników na 'farmie' przez comiesięczne First Saturday oraz Second Sunday, aż po
+                anomalie, na które zjeżdża się setki agentów obu frakcji.
+            </p>
+        </div>
+        <ul class="controls" >
+            <li onclick="moveToSection('section4')"></li>
+        </ul>
+    </section>
 
-        </form>
+    <section id="section4" class="contact_class main_section">
+        <div class="contentBox form_box">
+            <form class="recruit_form">
+                <fieldset>
+                    <h2 class="form_title">Dołącz do społeczności już dziś!</h2>
+                    <label>
+                        Nick z gry
+                        <input type="text" name="nickname" placeholder="Agent Codename" required>
+                    </label>
+                    <label>
+                        Nick z Telegrama
+                        <input type="text" name="tgusername" placeholder="Telegram Nickname" required>
+                    </label>
+                    <input type="submit" id="submit_button" name="submit_button" class="submit_button" onsubmit="recruit_form_submitted()">
+                </fieldset>
+
+            </form>
+        </div>
         <ul class="controls reverse" >
             <li onclick="moveToSection('section1')"></li>
         </ul>
     </section>
+
+    <footer>
+        Strona stworzona przez Resistance dla Resistance. Nie związany oficjalnie z Ingress lub Niantic Labs.<br>
+        Created with love by JakubO ©2022
+    </footer>
 </body>
 </html>
