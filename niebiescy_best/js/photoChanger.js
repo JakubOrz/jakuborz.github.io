@@ -31,10 +31,10 @@ function throttle(func, wait) {
 }
 
 function onDocumentLoaded(){
-    if (isMobile){
-        let logo_link = document.getElementById("logo_link");
-        logo_link.innerText = "IRP";
-    }
+    // if (isMobile){
+    //     let logo_link = document.getElementById("logo_link");
+    //     logo_link.innerText = "IRP";
+    // }
     loadSlides();
     document.getElementById("submit_button").addEventListener("click", function(event){
         event.preventDefault();
@@ -68,5 +68,7 @@ function nextSlide(){
 }
 
 function moveToSection(section){
-    document.getElementById(section).scrollIntoView()
+    let documentSection =  document.getElementById(section);
+    documentSection.scrollIntoView();
+    // setTimeout(() => documentSection.classList.add("lineUp"), 1000);
 }

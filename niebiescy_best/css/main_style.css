@@ -35,6 +35,7 @@ header{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     z-index: 2000;
     padding: 20px 50px;
     background-color: rgba(0,0,0,0.2);
@@ -65,6 +66,14 @@ header ul li{
 header ul li a{
     text-decoration: none;
     color: #FFFFFF;
+    transition: 0.6s;
+}
+
+header ul li a:hover{
+    text-decoration: none;
+    color: #53a1ff;
+    font-size: 120%;
+    text-shadow: 0 0 25px 10px rgba(0,0,0,0.6);
 }
 
 section{
@@ -106,35 +115,43 @@ section{
 
 .controls{
     position: absolute;
-    left: 45%;
+    left: 0;
     bottom: 0;
-    width: 10%;
+    width: 100%;
+    height: 5%;
+    opacity: 60%;
+    transition: 0.8s;
+}
+.controls:hover{
+    opacity: 90%;
     height: 10%;
 }
 
 .controls li{
     position: relative;
-    width: 80px;
-    border-radius: 40px;
-    height: 80px;
-    background: #0077ff;
+    width: 100%;
+    border-radius: 40px 40px 0 0;
+    height: 100%;
+    background: #000000;
+    color: #7dd4f3;
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
 }
 .controls li:hover{
-    background: aliceblue;
+    background: #121215;
 }
 
 .controls li:before{
     content: '';
     position: absolute;
-    width: 20px;
-    height: 20px;
-    border-left: 3px solid black;
-    border-bottom: 3px solid black;
+    width: 30px;
+    height: 30px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
     transform: rotate(315deg);
 }
 .reverse li:before{
@@ -158,36 +175,55 @@ section{
 }
 
 .form_box{
+    position: absolute;
+    bottom: 20%;
+    left: 25%;
+    width: 50%;
+    height: 60%;
+    max-width: 85%;
+    max-height: 70%;
+    color: azure;
+    display: block;
+    font-size: 1.9em;
+    background: rgba(0, 0, 0, 0.65);
+    border-radius: 5px;
+    box-shadow: 0 0 25px 10px rgba(0,0,0,0.6);
     padding: 10px 10px 10px 10px;
     text-align: center;
 }
 
+.recruit_form{
+    width: 100%;
+    height: 100%;
+}
+
 .recruit_form h2{
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .recruit_form fieldset{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
     border: 0 none;
     border-radius: 4px;
-
     box-sizing: border-box;
-    position: relative;
     width: 100%;
-    max-width: 100%;
-    max-height: 100%;
     height: 100%;
-    left: 0;
 }
 
 .recruit_form input{
-    padding: 12px;
+    padding: 20px;
     border: 1px solid #ccc;
     width: 100%;
 }
 
-.recruit_form input .submit_button{
-    width: 100px;
-    background-color: #0077ff;
+#submit_button{
+    width: 40%;
+    position: relative;
+    left: 30%;
+    background-color: #dfefff;
     font-weight: bold;
     border: 0 none;
     border-radius: 2px;
@@ -196,8 +232,9 @@ section{
     margin: 10px 5px;
 }
 
-.recruit_form input .submit_button:hover{
+#submit_button:hover{
     box-shadow: 0 0 0 2px white, 0 0 0 3px #16bdda;
+    color: #003d46;
 }
 
 .blue_text{
@@ -215,15 +252,30 @@ section{
     justify-content: center;
     align-items: center;
 }
-.link_box a{
+.link_box a #appstore_link, #google_play_link {
     width:165px;
     height:40px;
+    display:inline-block;
+    overflow:hidden;
+    background-position: center;
+    padding: 4px;
 }
+
+#appstore_link{
+    left: 10px;
+}
+
 
 @media only screen and (max-width: 1600px) {
     .contentBox {
         font-size: 1.6em;
         padding: 10px 20px 10px 20px;
+    }
+    .form_box{
+        width: 60%;
+        height: 50%;
+        left: 20%;
+        padding: 9px;
     }
 }
 
@@ -232,6 +284,12 @@ section{
         font-size: 1.5em;
         padding: 10px 20px 10px 20px;
     }
+    .form_box{
+        width: 70%;
+        height: 55%;
+        left: 15%;
+        padding: 8px;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -239,12 +297,39 @@ section{
         font-size: 1.3em;
         padding: 10px 20px 10px 20px;
     }
+    .form_box{
+        width: 80%;
+        height: 60%;
+        left: 10%;
+        bottom: 20%;
+        padding: 6px;
+    }
+    .recruit_form{
+        font-size: 0.9em;
+    }
 }
 
 @media only screen and (max-width: 600px) {
     .contentBox {
         font-size: 1em;
         padding: 10px 10px 10px 10px;
+    }
+    .form_box{
+        width: 90%;
+        height: 60%;
+        left: 7%;
+        bottom: 15%;
+        padding: 4px;
+    }
+    .link_box{
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .controls{
+        height: 10%;
+    }
+    .recruit_form{
+        font-size: 0.8em;
     }
 }
 

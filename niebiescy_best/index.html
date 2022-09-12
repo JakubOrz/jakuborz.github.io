@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Niebiescy best</title>
     <link href="css/main_style.css" rel="stylesheet" type="text/css">
+    <link href="css/text_effects.css" rel="stylesheet" type="text/css">
     <script src="js/photoChanger.js"></script>
     <script src="js/form_sumit_js.js"></script>
 </head>
@@ -28,7 +29,7 @@
     </header>
     <section id="section1" class="background_banner main_section">
         <div class="photoBox">
-            <img src="static/default.png" alt="Background" class="active">
+            <img src="static/default.png" alt="Background" >
             <img src="static/default.png" alt="Background" >
             <img src="static/desktop/3.png" alt="Background" >
             <img src="static/desktop/4.png" alt="Background" >
@@ -36,7 +37,7 @@
             <img src="static/desktop/6.png" alt="Background" >
             <img src="static/desktop/7.png" alt="Background" >
         </div>
-        <div class="contentBox">
+        <div class="contentBox lineUp">
             <p>
                 <h2> To nie tylko gra</h2>
                 "Świat wokół ciebie nie jest taki, jakim się wydaje"<br><br>
@@ -47,8 +48,8 @@
                 A ty po której stronie staniesz?
             </p>
             <div class="link_box">
-                <a id="google_play_link" style="display:inline-block;overflow:hidden;background:url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;background-size:152px; background-position: center;" href="https://play.google.com/store/apps/details?id=com.nianticproject.ingress&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" target="_blank"></a>
-                <a id="appstore_link" target="_blank" href="https://itunes.apple.com/us/app/ingress/id576505181?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;"></a>
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nianticproject.ingress&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" style="display:inline-block;overflow:hidden;background:url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;width:165px;height:40px;background-size:152px; background-position: center;"></a>
+                <a target="_blank" href="https://itunes.apple.com/us/app/ingress/id576505181?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
             </div>
         </div>
         <ul class="controls" >
@@ -67,7 +68,7 @@
         </ul>
     </section>
     <section id="section3" class="test_class main_section">
-        <div class="contentBox">
+        <div class="contentBox lineUp">
             <p>
                 <h2>Wydarzenia</h2>
                 Od spotanicznych pikników na 'farmie' przez comiesięczne First Saturday oraz Second Sunday, aż po
@@ -80,7 +81,7 @@
     </section>
 
     <section id="section4" class="contact_class main_section">
-        <div class="contentBox form_box">
+        <div class="form_box lineUp">
             <form class="recruit_form">
                 <fieldset>
                     <h2 class="form_title">Dołącz do społeczności już dziś!</h2>
@@ -92,7 +93,8 @@
                         Nick z Telegrama
                         <input type="text" name="tgusername" placeholder="Telegram Nickname" required>
                     </label>
-                    <input type="submit" id="submit_button" name="submit_button" class="submit_button" onsubmit="recruit_form_submitted()">
+                    <input type="submit" id="submit_button" name="submit_button" class="submit_button" onsubmit="recruit_form_submitted()"
+                           value="Zapisz się!">
                 </fieldset>
 
             </form>
