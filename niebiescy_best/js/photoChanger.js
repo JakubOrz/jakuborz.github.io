@@ -44,7 +44,7 @@ function onDocumentLoaded(){
 }
 
 function loadSlides(){
-    slides = document.querySelector('.photoBox').getElementsByTagName('img');
+    slides = document.querySelector('#photo_slides').getElementsByTagName('img');
     let source = "desktop";
     if (isMobile){
         source = "mobile";

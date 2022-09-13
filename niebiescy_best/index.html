@@ -6,6 +6,8 @@
     <title>Niebiescy best</title>
     <link href="css/main_style.css" rel="stylesheet" type="text/css">
     <link href="css/text_effects.css" rel="stylesheet" type="text/css">
+    <link href="css/icons.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/photoChanger.js"></script>
     <script src="js/form_sumit_js.js"></script>
 </head>
@@ -28,14 +30,14 @@
         </ul>
     </header>
     <section id="section1" class="background_banner main_section">
-        <div class="photoBox">
-            <img src="static/default.png" alt="Background" >
-            <img src="static/default.png" alt="Background" >
-            <img src="static/desktop/3.png" alt="Background" >
-            <img src="static/desktop/4.png" alt="Background" >
-            <img src="static/desktop/5.png" alt="Background" >
-            <img src="static/desktop/6.png" alt="Background" >
-            <img src="static/desktop/7.png" alt="Background" >
+        <div class="photoBox" id="photo_slides">
+            <img src="" alt="Background" >
+            <img src="" alt="Background" >
+            <img src="" alt="Background" >
+            <img src="" alt="Background" >
+            <img src="" alt="Background" >
+            <img src="" alt="Background" >
+            <img src="" alt="Background" >
         </div>
         <div class="contentBox lineUp">
             <p>
@@ -56,18 +58,36 @@
             <li onclick="moveToSection('section2')"></li>
         </ul>
     </section>
-    <section id="section2" class="main_section">
+    <section id="section2" class="main_section background_banner">
+        <div class="photoBox">
+            <img src="static/shared/society.jpg" alt="Society" class="active">
+        </div>
         <div class="contentBox">
             <p>
             <h2> Niebieska społeczność</h2>
-            Dołącz do nas już dzisiaj, pomóż walczyć z zielonom zarazą
+            Wspólne granie jest lepsze! <br>
+            Zaobserwuj nas na mediach społecznościowych.
             </p>
+            <ul class="social_media_list">
+                <li>
+                    <a href="https://www.instagram.com/res_masovia/" class="fa fa-instagram"></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/groups/923766547651363/" class="fa fa-facebook"></a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/RGNNticker" class="fa fa-twitter"></a>
+                </li>
+            </ul>
         </div>
         <ul class="controls" >
             <li onclick="moveToSection('section3')"></li>
         </ul>
     </section>
-    <section id="section3" class="test_class main_section">
+    <section id="section3" class="main_section background_banner">
+        <div class="photoBox">
+            <img src="static/shared/events.jpg" alt="Events" class="active" >
+        </div>
         <div class="contentBox lineUp">
             <p>
                 <h2>Wydarzenia</h2>
@@ -90,7 +110,7 @@
                         <input type="text" name="nickname" placeholder="Agent Codename" required>
                     </label>
                     <label>
-                        Nick z Telegrama
+                        Nick z <a href="https://telegram.org/" class="invisible_link">Telegrama</a>
                         <input type="text" name="tgusername" placeholder="Telegram Nickname" required>
                     </label>
                     <input type="submit" id="submit_button" name="submit_button" class="submit_button" onsubmit="recruit_form_submitted()"

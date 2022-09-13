@@ -1,0 +1,51 @@
+/* Style all font awesome icons */
+.fa {
+    border-radius: 30px;
+    padding: 20px;
+    width: 60px;
+    height: 60px;
+    /*font-size: 1.4em;*/
+    text-align: center;
+    text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    filter: brightness(120%);
+}
+
+.fa-instagram {
+    background: #ce309b;
+    color: white;
+}
+
+.fa-facebook {
+    background: #0032f8;
+    color: white;
+}
+
+.fa-twitter {
+    background: #36b2ff;
+    color: white;
+}
+
+.social_media_list li{
+    position: relative;
+}
+
+.social_media_list{
+    position: relative;
+    padding: 20px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 600px) {
+    .fa{
+        padding: 120%;
+    }
+}
