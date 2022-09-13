@@ -6,9 +6,9 @@ function recruit_form_submitted(){
 
 
     let xhr = new XMLHttpRequest();
-    // xhr.open("POST", "https://lady-isabell.herokuapp.com/resSociety", true);
+    xhr.open("POST", "https://lady-isabell.herokuapp.com/resSociety", true);
 
-    xhr.open("POST", "http://0.0.0.0:5000/resSociety", true);
+    // xhr.open("POST", "http://0.0.0.0:5000/resSociety", true);
     xhr.setRequestHeader('Content-Type', 'application/json');
     xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
     xhr.send(JSON.stringify(data));
