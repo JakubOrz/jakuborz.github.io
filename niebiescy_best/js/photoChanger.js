@@ -40,6 +40,10 @@ function onDocumentLoaded(){
         event.preventDefault();
         recruit_form_submitted();
     });
+    document.querySelector('#recruit_form').addEventListener('submit', (e) => {
+        const data = Object.fromEntries(new FormData(e.target).entries());
+        console.log(data)
+    });
 
 }
 
