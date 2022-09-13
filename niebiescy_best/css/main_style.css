@@ -106,7 +106,7 @@ section{
     opacity: 0;
     transition: 0.8s;
     background-position: center;
-    filter: blur(2px);
+    filter: blur(7px);
 }
 
 .background_banner .photoBox img.active{

@@ -50,7 +50,7 @@ function loadSlides(){
         source = "mobile";
     }
     Array.from(slides).forEach((element, index) => {
-        element.src = "static/"+source+"/"+(index+1)+".png";
+        element.src = "static/"+source+"/"+(index+1)+".jpg";
     });
     change_slide();
 
