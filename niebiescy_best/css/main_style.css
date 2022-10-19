@@ -296,6 +296,8 @@ section{
 @media only screen and (max-width: 1200px) {
     .contentBox {
         font-size: 1.5em;
+        width: 75%;
+        left: 12%;
         padding: 10px 20px 10px 20px;
     }
     .form_box{
@@ -332,6 +334,8 @@ section{
 @media only screen and (max-width: 600px) {
     .contentBox {
         font-size: 1em;
+        width: 90%;
+        left: 7%;
         padding: 10px 10px 10px 10px;
     }
     .form_box{
