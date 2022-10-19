@@ -54,6 +54,7 @@ header ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     text-shadow: 0 0 2px #000;
 }
 
@@ -287,6 +288,9 @@ section{
         left: 20%;
         padding: 9px;
     }
+    header .logo {
+        font-size: 1.8em;
+    }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -299,6 +303,9 @@ section{
         height: 55%;
         left: 15%;
         padding: 0;
+    }
+    header .logo {
+        font-size: 1.6em;
     }
 }
 
@@ -316,6 +323,9 @@ section{
     }
     .recruit_form{
         font-size: 0.9em;
+    }
+    header .logo {
+        font-size: 1.2em;
     }
 }
 
@@ -344,5 +354,8 @@ section{
     .recruit_form input{
         padding: 5px;
     }
+    /*header .logo {*/
+    /*    visibility: hidden;*/
+    /*}*/
 }
 
