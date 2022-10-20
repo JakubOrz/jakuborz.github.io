@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           IITC plugin: Download portal data
-// @version        0.0.1
+// @version        0.1.0
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://jakuborz.github.io/plugins/intel/data_downloander.user.js
 // @downloadURL    https://jakuborz.github.io/plugins/intel/data_downloander.user.js
@@ -26,12 +26,22 @@ function wrapper(plugin_info) {
 window.plugin.downloader = function() {};
 
 window.plugin.downloader.clicked = function() {
-    console.log("Tak kliknięto mnie wow")
+
+        let json = JSON.stringify(window.portals);
+        let blob = new Blob([json], {type: "application/json"});
+        let url  = URL.createObjectURL(blob);
+
+        let download_blob = document.createElement('a');
+        download_blob.download    = "portal_data_copy.json";
+        download_blob.href        = url;
+        download_blob.textContent = "blob_to_download";
+        download_blob.click();
+        download_blob.remove();
     }
 
 plugin.downloader.setup = function() {
     $('#toolbox').append($("<a>")
-        .text("copy_data")
+        .text("copy data")
         .click(plugin.downloader.clicked));
 }
 
