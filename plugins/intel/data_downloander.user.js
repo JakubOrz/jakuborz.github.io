@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           IITC plugin: Download portal data
-// @version        0.4.0
+// @version        0.5.0
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://jakuborz.github.io/plugins/intel/data_downloander.user.js
 // @downloadURL    https://jakuborz.github.io/plugins/intel/data_downloander.user.js
@@ -39,7 +39,7 @@ window.plugin.downloader.addLink = function() {
 
 window.plugin.downloader.downloadData = function (){
 
-            let json = JSON.stringify(plugin.downloader.portal_data);
+            let json = JSON.stringify(plugin.downloader.portal_data, null, 2);
             let blob = new Blob([json], {type: "application/json"});
             let url  = URL.createObjectURL(blob);
 
@@ -54,9 +54,14 @@ window.plugin.downloader.downloadData = function (){
 
 window.plugin.downloader.copydata = function(guid){
         let data = window.portals[guid].options.data;
+        let cleared_data = {
+            lat: data['latE6'],
+            lng: data['lngE6'],
+            image: data['image']
+        }
         let p = window.portals[guid];
         let ll = p.getLatLng();
-        plugin.downloader.portal_data.push(data);
+        plugin.downloader.portal_data.push(cleared_data);
 
         window.plugin.bookmarks.addPortalBookmark(guid, ll.lat+','+ll.lng, p.options.data.title);
 }
