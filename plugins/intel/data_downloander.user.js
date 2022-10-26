@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           IITC plugin: Download portal data
-// @version        0.1.0
+// @version        0.3.0
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://jakuborz.github.io/plugins/intel/data_downloander.user.js
 // @downloadURL    https://jakuborz.github.io/plugins/intel/data_downloander.user.js
@@ -35,28 +35,44 @@ window.plugin.downloader.addLink = function() {
         'title="Copy portal data into console">Copy data</a></aside>');
 }
 
-window.plugin.downloader.copydata = function(guid){
-        // console.log(guid);
-        // let data = window.portals[guid].options.data;
+window.plugin.downloader.downloadData = function (){
+            let custom_data = {
+                a:"yoo",
+                b:1
+            }
 
+            let json = JSON.stringify(custom_data);
+            let blob = new Blob([json], {type: "application/json"});
+            let url  = URL.createObjectURL(blob);
+
+            let download_blob = document.createElement('a');
+            download_blob.download = "portal_data_copy.json";
+            download_blob.href = url;
+            download_blob.textContent = "blob_to_download";
+            download_blob.click();
+            download_blob.remove();
+}
+
+
+window.plugin.downloader.copydata = function(guid){
         let p = window.portals[guid];
         let ll = p.getLatLng();
         window.plugin.bookmarks.addPortalBookmark(guid, ll.lat+','+ll.lng, p.options.data.title);
-
 }
 
-window.plugin().downloader.onHotkeyClicked = function (){
-    console.log("Guziczek naciśnięty");
-}
 
 plugin.downloader.setup = function() {
     window.plugin.downloader.setupCallback();
     document.addEventListener('keyup', (event) => {
-        let name = event.key;
         let code = event.code;
         // Alert the key name and key code on keydown
-        console.log(`Key pressed ${name} \r\n Key code value: ${code}`);
+        if (code === "Numpad9"){
+            window.plugin.downloader.copydata(window.selectedPortal);
+        }
     }, false);
+    $('.linkdetails').append(
+        '<aside><a onclick="window.plugin.downloader.downloadData()" ' +
+        'title="Download data into json">Download data</a></aside>');
 
 }
 
@@ -70,6 +86,7 @@ if(!window.bootPlugins) window.bootPlugins = [];
 window.bootPlugins.push(setup);
 // if IITC has already booted, immediately run the 'setup' function
     if(window.iitcLoaded && typeof setup === 'function') setup();
+
 } // wrapper end
 // inject code into site context
 var script = document.createElement('script');
