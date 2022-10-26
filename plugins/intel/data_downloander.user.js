@@ -29,14 +29,14 @@ window.plugin.downloader.setupCallback = function() {
     addHook('portalDetailsUpdated', window.plugin.downloader.addLink);
 }
 
-window.plugin.downloader.addLink = function(d) {
+window.plugin.downloader.addLink = function() {
     $('.linkdetails').append(
         '<aside><a onclick="window.plugin.downloader.copydata(\''+window.selectedPortal+'\')" ' +
         'title="Copy portal data into console">Copy data</a></aside>');
 }
 
 window.plugin.downloader.copydata = function(guid){
-        Console.log(guid);
+        console.log(guid);
 }
 window.plugin.downloader.clicked = function () {
 
