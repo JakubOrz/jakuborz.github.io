@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name           IITC plugin: Download portal data
-// @version        0.3.0
+// @version        0.4.0
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL      https://jakuborz.github.io/plugins/intel/data_downloander.user.js
 // @downloadURL    https://jakuborz.github.io/plugins/intel/data_downloander.user.js
@@ -25,6 +25,8 @@ function wrapper(plugin_info) {
 // PLUGIN START ////////////////////////////////////////////////////////
 window.plugin.downloader = function() {};
 
+window.plugin.downloader.portal_data = [];
+
 window.plugin.downloader.setupCallback = function() {
     addHook('portalDetailsUpdated', window.plugin.downloader.addLink);
 }
@@ -36,12 +38,8 @@ window.plugin.downloader.addLink = function() {
 }
 
 window.plugin.downloader.downloadData = function (){
-            let custom_data = {
-                a:"yoo",
-                b:1
-            }
 
-            let json = JSON.stringify(custom_data);
+            let json = JSON.stringify(plugin.downloader.portal_data);
             let blob = new Blob([json], {type: "application/json"});
             let url  = URL.createObjectURL(blob);
 
@@ -55,8 +53,11 @@ window.plugin.downloader.downloadData = function (){
 
 
 window.plugin.downloader.copydata = function(guid){
+        let data = window.portals[guid].options.data;
         let p = window.portals[guid];
         let ll = p.getLatLng();
+        plugin.downloader.portal_data.push(data);
+
         window.plugin.bookmarks.addPortalBookmark(guid, ll.lat+','+ll.lng, p.options.data.title);
 }
 
@@ -70,9 +71,9 @@ plugin.downloader.setup = function() {
             window.plugin.downloader.copydata(window.selectedPortal);
         }
     }, false);
-    $('.linkdetails').append(
-        '<aside><a onclick="window.plugin.downloader.downloadData()" ' +
-        'title="Download data into json">Download data</a></aside>');
+    $('#toolbox').append($("<a>")
+        .text("Download data")
+        .click(plugin.downloader.downloadData));
 
 }
 
