@@ -18,27 +18,44 @@ function wrapper(plugin_info) {
 //(leaving them in place might break the 'About IITC' page or break update checks)
     plugin_info.buildName = 'iitc';
     plugin_info.dateTimeVersion = '20170108.21732';
-    plugin_info.pluginId = 'portal-highlighter-hide-team';
+    plugin_info.pluginId = 'portal-data-copydata';
 //END PLUGIN AUTHORS NOTE
 
 
 // PLUGIN START ////////////////////////////////////////////////////////
 window.plugin.downloader = function() {};
 
-window.plugin.downloader.clicked = function() {
+window.plugin.downloader.setupCallback = function() {
+    addHook('portalDetailsUpdated', window.plugin.downloader.addLink);
+}
 
-        let json = JSON.stringify(window.portals);
-        let blob = new Blob([json], {type: "application/json"});
-        let url  = URL.createObjectURL(blob);
+window.plugin.downloader.addLink = function(d) {
+    $('.linkdetails').append(
+        '<aside><a onclick="window.plugin.downloader.copydata(\''+window.selectedPortal+'\')" ' +
+        'title="Copy portal data into console">Copy data</a></aside>');
+}
 
-        let download_blob = document.createElement('a');
-        download_blob.download    = "portal_data_copy.json";
-        download_blob.href        = url;
-        download_blob.textContent = "blob_to_download";
-        download_blob.click();
-        download_blob.remove();
-    }
+window.plugin.downloader.copydata = function(guid){
+        Console.log(guid);
+}
+window.plugin.downloader.clicked = function () {
 
+
+    /*      let json = JSON.stringify(window.portals);
+            let blob = new Blob([json], {type: "application/json"});
+            let url  = URL.createObjectURL(blob);
+
+            let download_blob = document.createElement('a');
+            download_blob.download = "portal_data_copy.json";
+            download_blob.href = url;
+            download_blob.textContent = "blob_to_download";
+            download_blob.click();
+            download_blob.remove();
+        }
+
+    */
+
+}
 plugin.downloader.setup = function() {
     $('#toolbox').append($("<a>")
         .text("copy data")
