@@ -38,28 +38,9 @@ window.plugin.downloader.addLink = function() {
 window.plugin.downloader.copydata = function(guid){
         console.log(guid);
 }
-window.plugin.downloader.clicked = function () {
 
-
-    /*      let json = JSON.stringify(window.portals);
-            let blob = new Blob([json], {type: "application/json"});
-            let url  = URL.createObjectURL(blob);
-
-            let download_blob = document.createElement('a');
-            download_blob.download = "portal_data_copy.json";
-            download_blob.href = url;
-            download_blob.textContent = "blob_to_download";
-            download_blob.click();
-            download_blob.remove();
-        }
-
-    */
-
-}
 plugin.downloader.setup = function() {
-    $('#toolbox').append($("<a>")
-        .text("copy data")
-        .click(plugin.downloader.clicked));
+    window.plugin.downloader.setupCallback();
 }
 
 const setup = plugin.downloader.setup;
