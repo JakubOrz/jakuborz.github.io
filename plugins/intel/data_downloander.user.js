@@ -37,6 +37,8 @@ window.plugin.downloader.addLink = function() {
 
 window.plugin.downloader.copydata = function(guid){
         console.log(guid);
+        let data = window.portals[guid].options.data;
+        conslole.log(JSON.stringify(data,null,2));
 }
 
 plugin.downloader.setup = function() {
