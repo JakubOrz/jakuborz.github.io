@@ -36,13 +36,28 @@ window.plugin.downloader.addLink = function() {
 }
 
 window.plugin.downloader.copydata = function(guid){
-        console.log(guid);
-        let data = window.portals[guid].options.data;
-        conslole.log(JSON.stringify(data,null,2));
+        // console.log(guid);
+        // let data = window.portals[guid].options.data;
+
+        let p = window.portals[guid];
+        let ll = p.getLatLng();
+        window.plugin.bookmarks.addPortalBookmark(guid, ll.lat+','+ll.lng, p.options.data.title);
+
+}
+
+window.plugin().downloader.onHotkeyClicked = function (){
+    console.log("Guziczek naciśnięty");
 }
 
 plugin.downloader.setup = function() {
     window.plugin.downloader.setupCallback();
+    document.addEventListener('keyup', (event) => {
+        let name = event.key;
+        let code = event.code;
+        // Alert the key name and key code on keydown
+        console.log(`Key pressed ${name} \r\n Key code value: ${code}`);
+    }, false);
+
 }
 
 const setup = plugin.downloader.setup;
