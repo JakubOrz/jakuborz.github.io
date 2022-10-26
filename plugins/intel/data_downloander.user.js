@@ -57,7 +57,8 @@ window.plugin.downloader.copydata = function(guid){
         let cleared_data = {
             lat: data['latE6'],
             lng: data['lngE6'],
-            image: data['image']
+            image: data['image'],
+            title: data['title']
         }
         let p = window.portals[guid];
         let ll = p.getLatLng();
