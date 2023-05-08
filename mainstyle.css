@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    background: rgb(2,23,65);
+    background: linear-gradient(45deg, rgba(2,23,65,1) 0%, rgba(76,3,82,1) 100%);
+}
+
+header{
+    position: sticky;
+    top: 0;
+    height: 10vh;
+    background: rgb(2,14,40);
+    background: radial-gradient(circle, rgba(2,14,40,1) 32%, rgba(26,12,27,1) 100%);
+}
+
+section{
+    min-height: 100vh;
+}
