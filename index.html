@@ -1,56 +1,83 @@
 <!DOCTYPE html>
 <html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <link href="mainstyle.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="mainstyle.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <title>Jakub Orzylowski</title>
-</head>
-<body>
-<header>
-    <a href="/">
-        Jakubo
-    </a>
+    <link rel="icon" type="image/x-icon" href="static/img/favicon.ico">
+    <script src="static/js/shared.js"> </script>
+    <script src="static/js/scroll_selector.js"> </script>
+    <script src="static/js/typer.js" ></script>
+  </head>
+  <body>
     <nav>
-        <ul>
-            <li>
-                <a href="#page1"> O mnie </a>
-            </li>
-            <li>
-                <a href="#contact"> Projekty </a>
-            </li>
-            <li>
-                <a href="#contact"> Kontakt </a>
-            </li>
-        </ul>
+      <ul id="section_list">
+        <li class="current" id="home_link"> <a href="#home"> Start </a> </li>
+        <li id="about_link"> <a href="#about"> O mnie </a> </li>
+        <li id="skills_link"> <a href="#skills"> Umiejętności </a> </li>
+        <li id="projects_link"> <a href="#projects"> Projekty </a> </li>
+      </ul>
     </nav>
-</header>
-
-    <h1>Hello there</h1>
-    <p>
-        Witaj jesteś w miejscu, gdzie nic nie ma, to ciekawe.
-    </p>
-    <section id="page1">
-        Sekcja numer 1
-    </section>
-    <section id="contact">
-        Yooo tutaj ma być kontakt
-    </section>
-
-    <nav>
-        <ul>
-            <li><a href="/plugins">Pluginy</a> </li>
-            <li><a href="/niebiescy_best">Strona IRW prototyp</a> </li>
-        </ul>
-    </nav>
-
-</body>
-<footer>
-    <div id="copy-lefts">
-        Jakub Orzyłowski © 2021 - 2023
+    <div class="languages-container">
+      <span class="lang-icon" onclick="console.log('polska')"> 🇵🇱 </span>
+      <span class="lang-icon" onclick="console.log('uk')"> 🇬🇧 </span>
     </div>
-    <div id="socials">
-        L
-        P.pl
+    <section id="home">
+      <div class="main-container vertical medium">
+        <div class="profile-photo-container">
+          <img src="static/img/portfolio_photo.png" alt="profile_photo">
+        </div>
+        <div class="description">
+          <h2> Nazywam się </h2>
+          <h1> Jakub Orzyłowski</h1>
+          <h2> jestem <span id="typewrite" data-period="2000"> .Net Developerem </span> </h2>
+          <button class="downoload-button"
+                  type="submit"
+                  onclick="window.open('static/data/cvJakubO.pdf')"> 📃 Zobacz CV </button>
+        </div>
+      </div>
+
+    </section>
+    <section id="about">
+      <div class="main-container">
+        <h1> Coś o mnie</h1>
+        <img class="placeholder" src="static/img/under_construction.jpeg" alt="under_construction">
+      </div>
+    </section>
+    <section id="skills">
+      <div class="main-container">
+        <h1> Moje umiejętności </h1>
+        <img class="placeholder" src="static/img/under_construction.jpeg" alt="under_construction">
+      </div>
+    </section>
+    <section id="projects">
+      <div class="main-container">
+        <h1> Zrealizowane projekty </h1>
+        <img class="placeholder" src="static/img/under_construction.jpeg" alt="under_construction">
+      </div>
+    </section>
+  </body>
+  <footer>
+    <div id="links">
+      <ul class="unmarked">
+        <li><a href="/plugins">Pluginy</a></li>
+        <li><a href="/niebiescy_best">Strona IRW prototyp</a></li>
+      </ul>
     </div>
-</footer>
+    <div class="copyrights">
+      <span> jakorzy00@gmail.com </span>
+      <span> Jakub Orzyłowski © 2021 - 2023 </span>
+    </div>
+    <div class="socials-links">
+        <a href="https://github.com/JakubOrz">
+          <img class="small-icon" src="static/img/github.ico" alt="github">
+        </a>
+        <a href="https://www.linkedin.com/in/jakubo48656c6c6f2074686572650a">
+          <img class="small-icon" src="static/img/linkedin.ico" alt="linkedin">
+        </a>
+    </div>
+  </footer>
 </html>
