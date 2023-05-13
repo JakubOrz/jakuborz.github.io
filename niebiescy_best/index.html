@@ -8,39 +8,41 @@
     <link href="css/text_effects.css" rel="stylesheet" type="text/css">
     <link href="css/icons.css" rel="stylesheet" type="text/css">
     <link href="css/menu_style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/x-icon" href="static/shared/favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/photoChanger.js"></script>
     <script src="js/form_sumit_js.js"></script>
+    <script src="js/scroll_selector_2.js"></script>
 </head>
 <body onload="onDocumentLoaded()">
-<header>
-        <a href="#section1" id="logo_link" class="logo">Ingress Resistance Polska</a>
+<header >
+    <a href="#section1" id="logo_link" class="logo_link"> </a>
         <ul>
-            <li>
-                <a href="#section1">Wstęp</a>
+            <li >
+                <a id="section2_link" href="#section2">Społeczność</a>
             </li>
-            <li>
-                <a href="#section2">Społeczność</a>
+            <li >
+                <a id="section3_link" href="#section3">Eventy</a>
             </li>
-            <li>
-                <a href="#section3">Eventy</a>
-            </li>
-            <li>
-                <a href="#section4">Dołącz</a>
+            <li >
+                <a id="section4_link" href="#section4">Dołącz</a>
             </li>
         </ul>
 </header>
     <section id="section1" class="background_banner main_section">
         <div class="photoBox" id="photo_slides">
-            <img src="" alt="Background" >
-            <img src="" alt="Background" >
-            <img src="" alt="Background" >
-            <img src="" alt="Background" >
-            <img src="" alt="Background" >
-            <img src="" alt="Background" >
-            <img src="" alt="Background" >
+            <img loading="lazy" src="" alt="Background" >
+            <img loading="lazy" src="" alt="Background" >
+            <img loading="lazy" src="" alt="Background" >
+            <img loading="lazy" src="" alt="Background" >
+            <img loading="lazy" src="" alt="Background" >
+            <img loading="lazy" src="" alt="Background" >
+            <img loading="lazy" src="" alt="Background" >
+            <img loading="lazy" src="" alt="Background" >
+            <img loading="lazy" src="" alt="Background" >
+            <img loading="lazy" src="" alt="Background" >
         </div>
-        <div class="contentBox lineUp">
+        <div id="section1_content" class="contentBox lineUp">
             <p>
                 <h2> To nie tylko gra</h2>
                 Ingress to stworzona przez Niantic Labs oparta na lokalizacji gra sieciowa  z
@@ -48,26 +50,31 @@
                 Naprzeciw siebie walczą dwie frakcje: <span class="green_text">Enlightened</span>, oraz <span class="blue_text">Resistance</span>.
                 Nie pozwól <span class="green_text">Oświeconym</span> zapanować nad
                 ludzkimi umysłami i dołącz do <span class="blue_text">Ruchu Oporu</span>!
-            </p>
             <div class="link_box">
-                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.nianticproject.ingress&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1" style="display:inline-block;overflow:hidden;background:url(https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png) no-repeat;width:165px;height:40px;background-size:152px; background-position: center;"></a>
-                <a target="_blank" href="https://itunes.apple.com/us/app/ingress/id576505181?mt=8" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:165px;height:40px;"></a>
+                <a target="_blank" class="app_link" id="google_play_link" href="https://play.google.com/store/apps/details?id=com.nianticproject.ingress&amp;utm_source=global_co&amp;utm_medium=prtnr&amp;utm_content=Mar2515&amp;utm_campaign=PartBadge&amp;pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1"></a>
+                <a target="_blank" class="app_link" id="appstore_link" href="https://itunes.apple.com/us/app/ingress/id576505181?mt=8" ></a>
             </div>
         </div>
-        <ul class="controls" >
-            <li onclick="moveToSection('section2')"></li>
-        </ul>
+        <div class="controls_panel">
+            <ul class="controls" >
+                <li onclick="moveToSection('section2')"></li>
+            </ul>
+        </div>
     </section>
     <section id="section2" class="main_section background_banner">
         <div class="photoBox">
-            <img src="static/shared/society.jpg" alt="Society" class="active">
+            <img loading="lazy" src="" alt="Society" class="active" >
+            <img loading="lazy" src="" alt="Society" >
+            <img loading="lazy" src="" alt="Society" >
+            <img loading="lazy" src="" alt="Society" >
+            <img loading="lazy" src="" alt="Society" >
         </div>
-        <div class="contentBox">
+        <div id="section2_content" class="contentBox lineUpHidden">
             <p>
             <h2> Niebieska społeczność</h2>
             Razem jest fajniej!<br>
             Zaobserwuj nas na mediach społecznościowych i zobacz jak się wspólnie bawimy!
-            </p>
+
             <ul class="social_media_list">
                 <li>
                     <a href="https://www.instagram.com/res_masovia/" class="fa fa-instagram"></a>
@@ -80,15 +87,26 @@
                 </li>
             </ul>
         </div>
-        <ul class="controls" >
-            <li onclick="moveToSection('section3')"></li>
-        </ul>
+        <div class="controls_panel">
+            <ul class="controls" >
+                <li onclick="moveToSection('section3')"></li>
+            </ul>
+        </div>
     </section>
     <section id="section3" class="main_section background_banner">
         <div class="photoBox">
-            <img src="static/shared/events.jpg" alt="Events" class="active" >
+            <img loading="lazy" src="" alt="Events" class="active" >
+            <img loading="lazy" src="" alt="Events" >
+            <img loading="lazy" src="" alt="Events" >
+            <img loading="lazy" src="" alt="Events" >
+            <img loading="lazy" src="" alt="Events" >
+            <img loading="lazy" src="" alt="Events" >
+            <img loading="lazy" src="" alt="Events" >
+            <img loading="lazy" src="" alt="Events" >
+            <img loading="lazy" src="" alt="Events" >
+            <img loading="lazy" src="" alt="Events" >
         </div>
-        <div class="contentBox lineUp">
+        <div id="section3_content" class="contentBox lineUpHidden">
             <p>
                 <h2>Wydarzenia</h2>
                     Od spotanicznych pikników na “farmach”, przez comiesięczne First Saturday oraz Second Sunday,
@@ -99,15 +117,17 @@
                     oponentów planując i realizując co raz to bardziej ambitne akcje, w których
                     można poczuć się jak prawdziwy tajny agent. Tego nie da się w prosty
                     sposób opisać tego trzeba samemu doświadczyć.
-            </p>
+<!--            </p>-->
         </div>
-        <ul class="controls" >
-            <li onclick="moveToSection('section4')"></li>
-        </ul>
+        <div class="controls_panel">
+            <ul class="controls" >
+                <li onclick="moveToSection('section4')"></li>
+            </ul>
+        </div>
     </section>
 
     <section id="section4" class="contact_class main_section">
-        <div class="form_box lineUp">
+        <div id="section4_content" class="form_box lineUpHidden">
             <form class="recruit_form" id="recruit_form">
                 <fieldset>
                     <h2 class="form_title">Dołącz do społeczności już dziś!</h2>
@@ -126,14 +146,16 @@
 
             </form>
         </div>
-        <ul class="controls reverse" >
-            <li onclick="moveToSection('section1')"></li>
-        </ul>
+        <div class="controls_panel">
+            <ul class="controls reverse" >
+                <li onclick="moveToSection('section1')"></li>
+            </ul>
+        </div>
     </section>
 
     <footer>
         Strona stworzona przez Resistance dla Resistance. Nie związany oficjalnie z Ingress lub Niantic Labs.<br>
-        Created with love by JakubO ©2022
+        Created with love by JakubO ©2022-2023
     </footer>
 </body>
 </html>

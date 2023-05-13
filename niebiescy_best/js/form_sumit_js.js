@@ -1,18 +1,23 @@
 
 function recruit_form_submitted(){
     let form = document.querySelector('#recruit_form');
+    if(!form.checkValidity()){
+        form.reportValidity();
+        return;
+    }
+
     const data = Object.fromEntries(new FormData(form).entries());
-    console.log(data);
 
     let xhr = new XMLHttpRequest();
-    xhr.open("POST", "https://lady-isabell.herokuapp.com/resSociety", true);
+    xhr.open("POST", "https://ladyisabell3-1-z4708130.deta.app/resSociety", true);
 
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    // xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+    let send_button = document.getElementById("submit_button");
+    send_button.disabled = true;
     xhr.send(JSON.stringify(data));
     xhr.onload = function() {
         if (this.status === 200) {
-            console.log("Sukces");
             form.remove();
             let message = document.createElement("h2")
             message.classList.add("form_title")
@@ -25,8 +30,7 @@ function recruit_form_submitted(){
             box.appendChild(message);
             box.appendChild(messagebody);
         } else {
-            let responsedata = JSON.parse(this.responseText);
-            console.log(responsedata);
+            send_button.disabled = false;
             document.querySelector('#form_error_message').innerHTML = "Zgłoszenie zawera błędy";
         }
     }

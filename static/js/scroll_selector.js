@@ -4,6 +4,9 @@ const onScroll = throttle(() => {
     let current_scroll = window.scrollY;
     document.querySelectorAll("section").forEach(function(section){
         let link_to_section = document.getElementById(section.id+"_link");
+        if (link_to_section === null){
+            return;
+        }
         link_to_section.classList.remove("current");
         if(section.offsetTop - (window.innerHeight / 2) < current_scroll &&
             section.offsetTop + (window.innerHeight / 2) > current_scroll){

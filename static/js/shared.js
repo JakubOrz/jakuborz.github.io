@@ -16,5 +16,3 @@ function throttle(func, timeFrame) {
         }
     };
 }
-
-console.log("shared loaded");
