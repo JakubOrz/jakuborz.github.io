@@ -399,9 +399,30 @@ section{
     footer{
         font-size: 0.8em;
     }
+    header{
+        font-size: 1.1em;
+    }
 
     /*header .logo {*/
     /*    visibility: hidden;*/
     /*}*/
 }
 
+@media only screen and (max-width: 500px) {
+    header{
+        font-size: 1.1em;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    header{
+        font-size: 0.9em;
+    }
+}
+
+
+@media only screen and (max-width: 380px) {
+    header{
+        font-size: 0.8em;
+    }
+}
