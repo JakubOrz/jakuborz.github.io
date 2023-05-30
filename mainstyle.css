@@ -95,6 +95,7 @@ h1{
 .main-container{
     /*background-color: var(--primary-color);*/
     font-size: 32px;
+    max-width: 70vw;
     background: var(--primary-backround-color);
     background: var(--primary-background-gradient);
     box-shadow: 0 0 10px 10px var(--primary-color);
@@ -104,6 +105,7 @@ h1{
     animation-duration: 0.8s;
     animation-name: animate-fade;
     animation-fill-mode: backwards;
+    margin-bottom: 50px;
 }
 
 .vertical{
@@ -133,7 +135,9 @@ h1{
 }
 
 nav{
+    z-index: 100;
     font-family: 'Montserrat', sans-serif;
+    font-size: 1.1em;
     position: fixed;
     font-weight: 600;
     left: 0;
@@ -236,5 +240,81 @@ button:hover{
 
 .small-icon{
     width: 25px;
+}
+
+.skills_box{
+    width: 70vw;
+}
+
+.skill_bar{
+    height: 15px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+@keyframes progress {
+    0%{
+        width: 0;
+        opacity: 0;
+    }
+    100%{
+        opacity: 100;
+    }
+
+}
+
+.skill h3{
+    font-size: 0.7em;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+.skill_progress{
+    height: 100%;
+    border-radius: 10px;
+    background: rgb(150,87,130);
+    background: linear-gradient(53deg, rgba(150,87,130,1) 0%, rgba(235,73,182,1) 100%);
+    animation: progress 2s ease-out forwards;
+}
+
+.about-container p{
+    font-size: 0.7em;
+    text-justify: inter-character;
+}
+
+.project-container{
+    display: flex;
+    min-width: 70vw;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.project-card{
+    font-size: 0.7em;
+    padding: 10px;
+    border-top: 1px solid rgba(235,73,182,0.5);
+    gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.project-card:hover{
+    filter: brightness(1.05);
+}
+
+.card-description{
+    flex-grow: 3;
+}
+
+.card-stack{
+    min-width: 150px;
+}
+
+.card-img{
+    background: rgb(150,87,130);
+    border-radius: 75px;
+    height: 150px;
+    width: 150px;
 }
 

@@ -42,21 +42,159 @@
 
     </section>
     <section id="about">
-      <div class="main-container">
+      <div class="main-container about-container">
         <h1> Coś o mnie</h1>
-        <img class="placeholder" src="static/img/under_construction.jpeg" alt="under_construction">
+        <p> Z programowaniem pierwszy raz miałem styczność w wieku 12 lat, wtedy to odkryłem, że automatyzacja czynności sprawia mi radość.
+        Rozwijałem nowa poznaną pasję poprzez udział w kółkach informatycznych oraz tworząc swoje pierwsze boty, miałem swój krótki epizod
+        związany z tworzeniem modów do minecrafta.</p>
+        <p> Rozwijałem swoją pasję programowania poprzez okres gimnazjum oraz liceum biorąc udział w konkursach informatycznych takich jak Bóbr</p>
+        <p> Prawdziwą szanse do rozwoju dały mi dopiero studia, gdzie mogłem posmakować wielu różnych języków, tam też ostatecznie ukierunkowałem
+        ścieżkę swojego rozwoju jako Backend Developer. </p>
+
       </div>
     </section>
     <section id="skills">
       <div class="main-container">
         <h1> Moje umiejętności </h1>
-        <img class="placeholder" src="static/img/under_construction.jpeg" alt="under_construction">
+        <div class="skills_box">
+          <div class="skill">
+            <h3> C# / .NET </h3>
+            <div class="skill_bar">
+              <div class="skill_progress" style="width: 45%">
+              </div>
+            </div>
+          </div>
+          <div class="skill">
+            <h3> Python </h3>
+            <div class="skill_bar">
+              <div class="skill_progress" style="width: 40%">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3> Java </h3>
+          <div class="skill_bar">
+            <div class="skill_progress" style="width: 38%">
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3> Spring </h3>
+          <div class="skill_bar">
+            <div class="skill_progress" style="width: 8%">
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3> SQL </h3>
+          <div class="skill_bar">
+            <div class="skill_progress" style="width: 45%">
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3> JavaScript / TypeScipt </h3>
+          <div class="skill_bar">
+            <div class="skill_progress" style="width: 20%">
+            </div>
+          </div>
+        </div>
+        <div class="skill">
+          <h3> Azure </h3>
+          <div class="skill_bar">
+            <div class="skill_progress" style="width: 12%">
+            </div>
+          </div>
+        </div>
       </div>
     </section>
     <section id="projects">
       <div class="main-container">
-        <h1> Zrealizowane projekty </h1>
-        <img class="placeholder" src="static/img/under_construction.jpeg" alt="under_construction">
+        <h1> Moje ważniejsze projekty </h1>
+        <div class="project-container">
+          <div class="project-card">
+            <img class="card-img" src="static/img/projects/home_heart-1.svg" alt="Pojekt1">
+            <div class="card-description">
+              <h3> ZnajdzSchronienie.live </h3>
+              W 2022 roku, w przeciągu pierwszych godzin po inwazji na Ukrainę, chciałem zrobić cokolwiek, aby pomóc.
+              W czasie 48 godzin od zera bez niczyjej pomocy, udało mi się przygotować serwis oferujący możliwość
+              zgłoszenia miejsca schronienia na terenie Polski dla osób potrzebujących.
+              W czasie kolejnych tygodni powstały identyczne tego typu strony, które to zebrały popularność, z powodu braku
+              użytkowników po roku działania nie wykupiłem przedłużenia domeny.
+            </div>
+            <ul class="card-stack">
+              <li> Php </li>
+              <li> JavaScript </li>
+              <li> MySql </li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <img class="card-img" src="static/img/projects/SZ_logo.ico" alt="Pojekt2">
+            <div class="card-description">
+              <h3> Sekretny Znajomy </h3>
+              Projekt tworzony w ramach pracy inżynierskiej. Głównym celem miało być utworzenie aplikacji czasu rzeczywistego,
+              opartej w całości na technologii .NET. Dzięki stworzeniu nowego sub-protokołu komunikacji z wykorzystaniem WebSocketów
+              udało się umożliwość jednoczesne komunikowanie się z wieloma użytkownikami z zachowaniem całkowitej anonimowości.
+              W ramach projektów powstał dodatkowo algorytm parowania użytkowników, wykrywacz botów i wiele innych. Serwis jest
+              chwilowo zamrożony z powodu brania udziału w konkursie na prace dyplomowe.
+            </div>
+            <ul class="card-stack">
+              <li> C#/.NET </li>
+              <li> MSSQL </li>
+              <li> Blazor </li>
+              <li> Azure </li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <img class="card-img" src="static/img/projects/audio.png" alt="Pojekt3">
+            <div class="card-description">
+              <h3> Annotator-Segmentator </h3>
+              Utworzony w ramach mojej pracy w projekcie Clarin. Stanowi dodatek do programu "Elan". Głównym zadaniem
+              jest częściowa automatyzacja pracy związanej z anotacją nagrań rozmów nagrywanych w ramach korpusu Clarin.
+              Program oferuje prosty interfejs graficzny, głównym zadaniem jest analiza nagrania wav, celem wykrycia mowy,
+              (wykrycie kiedy jest mowa, a nie rozpoznanie tej mowy), a następnie przygotowanie pliku .eaf który to może być
+              edytowany w pogramie Elan. Program skraca czas anotacji nagrania o około 40%. Produkt został wydany w wersjach
+              portale na systemy Windows i Linux.
+            </div>
+            <ul class="card-stack">
+              <li> Python </li>
+              <li> QT </li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <img class="card-img" src="static/img/projects/iza_awatar_nowy.jpg" alt="Pojekt4">
+            <div class="card-description">
+              <h3> Lady Isabell bot v3 </h3>
+              Dziś jest to sieć botów na komunikatorze Telegram, których celem jest pomoc organizatorom w przeprowadzeniu
+              eventów. Oferuje możliwość utworzenie i dowolnej customizacji do 3 botów. Głównym celem jest udzielanie
+              odpowiedzi na powtarzające się pytania, oprócz tego umożliwia prowadzenie zapisów, weryfikacji uczestników,
+              autonomicznej moderacji grup dyskusyjnych i wiele innych.
+              Początkowo rozwijany jako bot Q&A na Telegramie w oparciu o Php i MySQL, z czasem co raz bardziej rozwijany.
+              Wersja v2 stanowiła refaktoryzację całego kodu źródłowego na język Python i PosgreSQL.
+              Wersja v3 umożliwiła klonowanie instancji botów, oraz umożliwiła pełną customizację z interfejsu Telegrama.
+            </div>
+            <ul class="card-stack">
+              <li> Python </li>
+              <li> FastAPI </li>
+              <li> PostreSQL </li>
+            </ul>
+          </div>
+          <div class="project-card">
+            <img class="card-img" src="static/img/projects/swag_shop_logo.png" alt="Pojekt5">
+            <div class="card-description">
+              <h3> Biocard Swag Shop </h3>
+              Obecnie w trakcie tworzenia. Ma stanowić serwis umożliwiający tworzenie użytwnikom swoich własnych sklepów
+              z kartami kolekjonerskimi.
+            </div>
+            <ul class="card-stack">
+              <li> C# / .NET </li>
+              <li> React </li>
+              <li> Azure </li>
+              <li> CosmosDB </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   </body>
